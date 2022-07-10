@@ -18,8 +18,6 @@ UICollectionView：一个管理数据项的有序集合，并使用可定制的�
 
 UIWebView&WKWebView：显示网页
 
-UINavigationBar：屏幕顶部的长条中展示的导航控制，通常和一个导航控制器连接
-
 # 三、列举出三个UITableViewDelegate声明的方法
 
 1.继承UIViewController，实现UITableViewDataSource和UITableViewDelegate协议
