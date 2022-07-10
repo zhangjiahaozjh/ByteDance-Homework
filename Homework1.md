@@ -2,21 +2,19 @@
 
 ## 1.APP的生命周期
 
-点击程序图标->执行main函数->通过UIApplicationMain函数->初始化UIApplication对象并且为它设置代理对象->开启消息循环与事件监听->程序结束退出
+点击程序图标->执行main函数->通过UIApplicationMain函数->初始化UIApplication对象,并且为它设置代理对象开启消息循环->事件监听（应用程序加载完毕->应用程序获取焦点->应用程序进入前台->应用程序收到内存警告，可能种植->应用程序失去焦点->应用程序进入后台->应用程序即将终止）->程序结束退出
 
 ## 2.ViewController的生命周期
 
-分配内存并初始化（alloc/init）->视图加载完成（loadView）->将要展示（viewDidLoad）->将要布局子视图（viewWillAppear）->已经布局子视图（viewDidAppear）->将要消失（viewWillDisappear）->已经消失（viewDidDisappear）->销毁释放（dealloc）
-
-
-
-当一个视图控制器被创建，并在屏幕上显示的时候。 代码的执行顺序： 1、 alloc：创建对象，分配空间 2、init (initWithNibName) ：初始化对象，初始化数据 3、loadView ：从nib载入视图 ，通常这一步不需要去干涉。除非你没有使用xib文件创建视图 4、viewDidLoad ：载入完成，可以进行自定义数据以及动态创建其他控件 5、viewWillAppear ：视图将出现在屏幕之前，马上这个视图就会被展现在屏幕上了 6、viewDidAppear ：视图已在屏幕上渲染完成
-
-当一个视图被移除屏幕并且销毁的时候的执行顺序，这个顺序差不多和上面的相反： 1、viewWillDisappear ：视图将被从屏幕上移除之前执行 2、viewDidDisappear ：视图已经被从屏幕上移除，用户看不到这个视图了 3、dealloc ：视图被销毁，此处需要对你在init和viewDidLoad中创建的对象进行释放
+alloc(创建对象，分配空间) -> init(初始化对象，初始化数据) -> awakeFromNib(所有视图的outlet和action已经连接，但还没有被确定) -> loadView(完成一些关键的view的初始化工作，加载view) -> viewDidLoad(载入完成，可以进行自定义数据以及动态创建其他控件) -> viewWillAppear(视图将出现在屏幕之前) -> viewWillLayoutSubviews(将要对子视图进行调整) -> viewDidLayoutSubviews(对子视图调整完毕) -> viewDidAppear(视图已在屏幕上渲染完成) ->viewWillDisappear(视图将从屏幕上移除) -> viewDidDisappear(视图已经被从屏幕上移除) -> dealloc(视图被销毁)
 
 # 二、写出五种常用的UI控件
 
-UIScrollView、UITableView、UICollectionView、UIWebView&WKWebView、UINavigationBar
+UIScrollView：一个可显示超过其屏幕大小的UI控件，允许滚动和缩放其包含的视图
+UITableView：一个使用单列来显示数据的视图，只支持纵向移动
+UICollectionView：一个管理数据项的有序集合，并使用可定制的布局来显示它们的对象
+UIWebView&WKWebView：显示网页
+UINavigationBar：屏幕顶部的长条中展示的导航控制，通常和一个导航控制器连接
 
 # 三、列举出三个UITableViewDelegate声明的方法
 
