@@ -11,9 +11,13 @@ alloc(创建对象，分配空间) -> init(初始化对象，初始化数据) ->
 # 二、写出五种常用的UI控件
 
 UIScrollView：一个可显示超过其屏幕大小的UI控件，允许滚动和缩放其包含的视图
+
 UITableView：一个使用单列来显示数据的视图，只支持纵向移动
+
 UICollectionView：一个管理数据项的有序集合，并使用可定制的布局来显示它们的对象
+
 UIWebView&WKWebView：显示网页
+
 UINavigationBar：屏幕顶部的长条中展示的导航控制，通常和一个导航控制器连接
 
 # 三、列举出三个UITableViewDelegate声明的方法
