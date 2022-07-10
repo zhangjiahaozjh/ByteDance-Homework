@@ -1,10 +1,10 @@
-### 1.按顺序打印出App、ViewController生命周期的各个事件
+# 一、按顺序打印出App、ViewController生命周期的各个事件
 
-#### 一、APP的生命周期
+## 1.APP的生命周期
 
 点击程序图标->执行main函数->通过UIApplicationMain函数->初始化UIApplication对象并且为它设置代理对象->开启消息循环与事件监听->程序结束退出
 
-#### 二、ViewController的生命周期
+## 2.ViewController的生命周期
 
 分配内存并初始化（alloc/init）->视图加载完成（loadView）->将要展示（viewDidLoad）->将要布局子视图（viewWillAppear）->已经布局子视图（viewDidAppear）->将要消失（viewWillDisappear）->已经消失（viewDidDisappear）->销毁释放（dealloc）
 
@@ -14,11 +14,11 @@
 
 当一个视图被移除屏幕并且销毁的时候的执行顺序，这个顺序差不多和上面的相反： 1、viewWillDisappear ：视图将被从屏幕上移除之前执行 2、viewDidDisappear ：视图已经被从屏幕上移除，用户看不到这个视图了 3、dealloc ：视图被销毁，此处需要对你在init和viewDidLoad中创建的对象进行释放
 
-### 2.写出五种常用的UI控件
+# 二、写出五种常用的UI控件
 
 UIScrollView、UITableView、UICollectionView、UIWebView&WKWebView、UINavigationBar
 
-### 3.列举出三个UITableViewDelegate声明的方法
+# 三、列举出三个UITableViewDelegate声明的方法
 
 1.继承UIViewController，实现UITableViewDataSource和UITableViewDelegate协议
 
