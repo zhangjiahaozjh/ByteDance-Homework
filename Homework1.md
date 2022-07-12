@@ -20,22 +20,20 @@ UIWebView&WKWebView：显示网页
 
 # 三、列举出三个UITableViewDelegate声明的方法
 
-1.选中某行cell调用此方法
+1.继承UIViewController，实现UITableViewDataSource和UITableViewDelegate协议
 
-```
-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-```
+@interface UIViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
 
-2.自定义每组头部的view 需要使用到UITableViewHeaderFooterView
+}
+@end
+2.继承UITableViewController,UITableViewController默认实现UITableViewDataSource和UITableViewDelegate协议
 
-```
-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section; 
-```
+@interface UIViewController : UITableViewController
 
-3.自定义每组尾部的View 需要使用到UITableViewHeaderFooterView
+@end
+3.直接声明
 
-```
-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section;
+@MainActor protocol UITableViewDelegate
 ```
 
 
