@@ -36,7 +36,7 @@ UIWebView&WKWebView：显示网页
 @end
 ```
 
-3.直接声明
+3.直接对UITableViewDelegate进行声明
 
 ```
 @MainActor protocol UITableViewDelegate
