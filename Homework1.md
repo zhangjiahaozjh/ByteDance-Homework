@@ -19,21 +19,30 @@ UICollectionView：一个管理数据项的有序集合，并使用可定制的�
 UIWebView&WKWebView：显示网页
 
 # 三、列举出三个UITableViewDelegate声明的方法
-
 1.继承UIViewController，实现UITableViewDataSource和UITableViewDelegate协议
 
+```
 @interface UIViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>{
 
 }
 @end
+```
+
 2.继承UITableViewController,UITableViewController默认实现UITableViewDataSource和UITableViewDelegate协议
 
+```
 @interface UIViewController : UITableViewController
 
 @end
+```
+
 3.直接声明
 
+```
 @MainActor protocol UITableViewDelegate
+```
+
+
 ```
 
 
