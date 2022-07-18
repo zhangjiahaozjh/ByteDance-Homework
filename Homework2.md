@@ -43,7 +43,7 @@
     
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Student * st = [[Student alloc] init];
+        Student * student = [[Student alloc] init];
         [st study:24.2];
     }
     return 0;
