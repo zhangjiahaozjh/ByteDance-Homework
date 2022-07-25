@@ -2,7 +2,7 @@
 //  Passenger.h
 //  College Demo
 //
-//  Created by mashujun on 2022/7/18.
+//  Created by zjh on 2022/7/25.
 //
 
 #import "Person.h"
@@ -12,37 +12,37 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Orders : NSObject
 
 @property (nonatomic, copy) NSString *PassengerName;
-//³Ë¿ÍĞÕÃû
+//ä¹˜å®¢å§“å
 @property (nonatomic, copy) Address *Departureplace;
-//³ö·¢µØ
+//å‡ºå‘åœ°
 @property (nonatomic, copy) Address *Destination;
-//Ä¿µÄµØ
+//ç›®çš„åœ°
 @property (nonatomic, assign) NSDate *Starttime;
-//·¢³µÊ±¼ä
+//å‘è½¦æ—¶é—´
 @property (nonatomic, assign) NSDate *Endtime;
-//µ½´ïÊ±¼ä
+//åˆ°è¾¾æ—¶é—´
 @property (nonatomic, copy) NSNumber *Trainnumber;
-//³µ´Î
+//è½¦æ¬¡
 @property (nonatomic, copy) NSNumber *Seat;
-//×ùÎ»
+//åº§ä½
 -(instancetype)initOrder:(NSString *) PassengerName Departureplace:(Address *) Departureplace Destination:(Address *) Destination Starttime:(nonnull NSDate *) Starttime Endtime:(nonnull NSDate *) Endtime Trainnumber:(NSNumber *)Trainnumber Seat:(NSNumber *) Seat;
 @end
 
 @interface Passenger : Person
-// @property ÊôĞÔ
+// @property å±æ€§
 
 @property (nonatomic, assign) BOOL ifAdult;
-// ÊÇ·ñÄêÂú 18 Ëê
+// æ˜¯å¦å¹´æ»¡ 18 å²
 @property (nonatomic, assign) NSMutableArray *HistoryOrder;
-// ÀúÊ·¶©µ¥ £¨Êı×é£©
+// å†å²è®¢å• ï¼ˆæ•°ç»„ï¼‰
 @property (nonatomic, assign) NSMutableArray *OutstandingOrder;
-// Î´³öĞĞ¶©µ¥ £¨Êı×é£©
+// æœªå‡ºè¡Œè®¢å• ï¼ˆæ•°ç»„ï¼‰
 
-// Function ·½·¨
+// Function æ–¹æ³•
 -(void) Booking:(Orders *) order;
-// È¥¶©Æ±
+// å»è®¢ç¥¨
 -(void) Ticketcheck:(Orders *)order;
-// È¥¼ìÆ±
+// å»æ£€ç¥¨
 
 @end
 
